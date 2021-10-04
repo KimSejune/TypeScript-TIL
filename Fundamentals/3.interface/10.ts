@@ -5,7 +5,8 @@ interface CraftBeer5 {
 }
 
 function myBeer5(): CraftBeer5 {
-  let my = (function(beer:string) {}) as CraftBeer5;
+  let my = (function(beer:string) {console.log('beer :', beer)}) as CraftBeer5;
+  console.log(my)
   my.brand = 'Cass';
   my.brew = function() {
     console.log(`${my.brand} drink!`);
@@ -15,6 +16,6 @@ function myBeer5(): CraftBeer5 {
 }
 
 let brewedBeer = myBeer5();
-brewedBeer('My First Beer');
+brewedBeer('My First Beer'); // function beer에 값이 할당.
 brewedBeer.brand = 'Test Craft';
 brewedBeer.brew(); // Test Craft drink!
