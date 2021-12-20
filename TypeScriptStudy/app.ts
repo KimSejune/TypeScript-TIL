@@ -3,10 +3,13 @@ function add(n1: number, n2: number) {
   return result;
 }
 
+type Combinable = number | string;
+type ConversionDescriptor = "as-number" | "as-text";
+
 function combine(
-  input1: number | string,
-  input2: number | string,
-  resultConversation: "as-number" | "as-text"
+  input1: Combinable,
+  input2: Combinable,
+  resultConversation: ConversionDescriptor
 ) {
   let result;
   if (
